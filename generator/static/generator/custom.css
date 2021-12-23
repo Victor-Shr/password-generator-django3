@@ -1,0 +1,21 @@
+#id_0 {
+    margin: 7px;
+    background-color: #8DA399;
+}
+
+#id_1 {
+    margin: 14%;
+}
+
+#id_2 {
+    margin: 7px;
+    background-color: #8DA399;
+}
+
+body {
+    background-image: url(background.png);
+}
+
+.cnt {
+   margin: 23%;
+}

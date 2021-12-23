@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <meta charset="UTF-8">
+        <title>Password generator</title>
+        <link rel="icon" type="image/png" href="{% static 'generator/logo.png' %}">
+    </head>
+<body>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<link rel="stylesheet" href="{% static 'generator/custom.css' %}">
+<div class="container text-center">
+    <div class="cnt">
+        <h1>Генератор паролей</h1>
+
+        <form action="{% url 'password' %}">
+            <select name="length">
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12" selected="selected">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+            </select> Длина пароля
+            <br>
+            <input type="checkbox" name="uppercase"> Верхний регистр
+            <br>
+            <input type="checkbox" name="numbers"> Цифры
+            <br>
+            <input type="checkbox" name="special"> Специальные символы
+            <br>
+
+            <input type="submit" value="Создать пароль" class="btn btn-success">
+        </form>
+        <form action="info">
+            <input id="id_0" type="submit" value="О проекте" class="btn btn-secondary">
+        </form>
+    </div>
+</div>
+</body>
+</html>
+
