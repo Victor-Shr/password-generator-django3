@@ -20,7 +20,9 @@ def password(request):
     if request.GET.get('special'):
         characters.extend(list('!@#$%^&*()_+|<>?.,\'\"~'))
 
-    length = int(request.GET.get('length', 14))
+    length = int(request.GET.get('length', 22))
+    if length > 22:
+        length = 22
     thepassword = ''
     for i in range(length):
         thepassword += random.choice(characters)
