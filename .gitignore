@@ -2,6 +2,7 @@
 *.log
 *.pot
 *.pyc
+config.py
 __pycache__/
 local_settings.py
 /static/
